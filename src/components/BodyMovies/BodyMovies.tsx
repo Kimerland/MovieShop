@@ -26,7 +26,7 @@ const BodyMovies: React.FC = () => {
     try {
       setLoading(true);
       const response = await fetch(
-        `https://movieland-backend.up.railway.app/api/movies?year=${year}&page=${page}`
+        `http://localhost:5000/api/movies?year=${year}&page=${page}`
       );
       const data = await response.json();
 

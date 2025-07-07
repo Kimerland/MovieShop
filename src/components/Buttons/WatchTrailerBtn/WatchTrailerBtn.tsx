@@ -9,7 +9,7 @@ const WatchTrailerBtn = ({ movie }: { movie: ICinema }) => {
   useEffect(() => {
     if (!movie?.Title) return;
     fetch(
-      `https://movieland-backend.up.railway.app/api/movies/trailer?title=${encodeURIComponent(
+      `http://localhost:5000/api/movies/trailer?title=${encodeURIComponent(
         movie.Title
       )}`
     )

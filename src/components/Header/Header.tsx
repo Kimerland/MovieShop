@@ -24,14 +24,11 @@ const Header: React.FC<HeaderProps> = ({ isSticky }) => {
       const token = localStorage.getItem("token");
       if (token) {
         try {
-          const server = await axios.get(
-            "https://movieland-backend.up.railway.app/api/user",
-            {
-              headers: {
-                Authorization: `Bearer ${token}`,
-              },
-            }
-          );
+          const server = await axios.get("http://localhost:5000/api/user", {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          });
           setCurrentUser(server.data.user);
         } catch (error) {
           console.error("Undefined user", error);
@@ -48,9 +45,7 @@ const Header: React.FC<HeaderProps> = ({ isSticky }) => {
     <header className={`${styles.header} ${isSticky ? styles.sticky : ""}`}>
       <div className={styles.wrapper}>
         <div className={styles.movie_logo}>
-          <img
-            src={`https://movieland-backend.up.railway.app/api/images/Logo.svg`}
-          />
+          <img src={`http://localhost:5000/api/images/Logo.svg`} />
           <Link className={styles.title} to="/">
             MovieLand
           </Link>

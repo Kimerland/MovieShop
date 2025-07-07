@@ -23,12 +23,9 @@ const SettingsContent = () => {
       if (!token) return;
 
       try {
-        const response = await axios.get(
-          "https://movieland-backend.up.railway.app/api/user",
-          {
-            headers: { Authorization: `Bearer ${token}` },
-          }
-        );
+        const response = await axios.get("http://localhost:5000/api/user", {
+          headers: { Authorization: `Bearer ${token}` },
+        });
 
         const { username, email, avatarUrl } = response.data.user;
         console.log("User data:", response.data.user);
@@ -55,13 +52,9 @@ const SettingsContent = () => {
   const handleSave = async () => {
     try {
       const token = localStorage.getItem("token");
-      await axios.put(
-        "https://movieland-backend.up.railway.app/api/user",
-        editedData,
-        {
-          headers: { Authorization: `Bearer ${token}` },
-        }
-      );
+      await axios.put("http://localhost:5000/api/user", editedData, {
+        headers: { Authorization: `Bearer ${token}` },
+      });
 
       setUser((prev) =>
         prev
@@ -81,7 +74,6 @@ const SettingsContent = () => {
           <p className={StyleSettings.settings_text}>Account Management</p>
           <div className={StyleSettings.settings_block}>
             <div className={StyleSettings.user_info}>
-              {/*  */}
               <div className={StyleSettings.button_group}>
                 {editing ? (
                   <>
@@ -107,7 +99,7 @@ const SettingsContent = () => {
                   </button>
                 )}
               </div>
-              {/*  */}
+
               <div className={StyleSettings.input_group}>
                 <label htmlFor="username" className={StyleSettings.input_label}>
                   Username

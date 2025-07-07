@@ -9,7 +9,7 @@ const WatchFilms = () => {
   const [videoId, setVideoId] = useState<string | null>(null);
   useEffect(() => {
     if (!id) return;
-    fetch(`https://movieland-backend.up.railway.app/api/movies/info/${id}`)
+    fetch(`http://localhost:5000/api/movies/info/${id}`)
       .then((res) => res.json())
       .then((data) => setMovie(data));
   }, [id]);
@@ -17,7 +17,7 @@ const WatchFilms = () => {
   useEffect(() => {
     if (!movie?.Title) return;
     fetch(
-      `https://movieland-backend.up.railway.app/api/movies/trailer?title=${encodeURIComponent(
+      `http://localhost:5000/api/movies/trailer?title=${encodeURIComponent(
         movie.Title
       )}`
     )

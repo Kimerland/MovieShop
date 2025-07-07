@@ -7,7 +7,7 @@ const HeaderSection = () => {
     <div className={StyleContent.home_text}>
       <div className={StyleContent.background_div}>
         <img
-          src={`https://movieland-backend.up.railway.app/api/images/people.jpg`}
+          src={`http://localhost:5000/api/images/people.jpg`}
           className={StyleContent.background_image}
         />
       </div>

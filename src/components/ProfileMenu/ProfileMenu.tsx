@@ -26,7 +26,7 @@ const ProfileMenu: FC<ProfileMenuProps> = ({ setCurrentUser }) => {
       const token = localStorage.getItem("token");
       if (token) {
         try {
-          const server = await axios.get("https://movieland-backend.up.railway.app/api/user", {
+          const server = await axios.get("http://localhost:5000/api/user", {
             headers: {
               Authorization: `Bearer ${token}`,
             },

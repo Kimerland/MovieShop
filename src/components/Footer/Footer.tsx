@@ -9,7 +9,7 @@ const Footer = () => {
         <div className={StyleFooter.top_section}>
           <div className={StyleFooter.logo_container}>
             <img
-              src={`https://movieland-backend.up.railway.app/api/images/Logo.svg`}
+              src={`http://localhost:5000/api/images/Logo.svg`}
               className={StyleFooter.logo_style}
             />
             <p className={StyleFooter.logo_text}>

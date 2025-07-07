@@ -11,19 +11,19 @@ const reviews = [
     text: "Accidentally got addicted to MovieLand, oops.",
     name: "Amber Nicole",
     role: "Coder",
-    img: `https://movieland-backend.up.railway.app/api/images/Helen.jpg`,
+    img: `http://localhost:5000/api/images/Helen.jpg`,
   },
   {
     text: "Yep, I just a dog but can draw design for project!",
     name: "Just Dog",
     role: "Designer",
-    img: `https://movieland-backend.up.railway.app/api/images/Dog.jpg`,
+    img: `http://localhost:5000/api/images/Dog.jpg`,
   },
   {
     text: "Amazing experience, loved working with MovieLand!",
     name: "Bill Gates",
     role: "Product Manager",
-    img: `https://movieland-backend.up.railway.app/api/images/BillGates.jpg`,
+    img: `http://localhost:5000/api/images/BillGates.jpg`,
   },
 ];
 

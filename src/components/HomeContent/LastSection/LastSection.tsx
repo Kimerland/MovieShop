@@ -14,13 +14,13 @@ const LastSection = () => {
       <div className={StyleContent.container_large}>
         <div className={StyleContent.best_subscribe}>
           <img
-            src={`https://movieland-backend.up.railway.app/api/images/MovieTicket.jpg`}
+            src={`http://localhost:5000/api/images/MovieTicket.jpg`}
             className={StyleContent.background_image}
           />
           <div className={StyleContent.content}>
             <div className={StyleContent.emoji_wrapper}>
               <img
-                src={`https://movieland-backend.up.railway.app/api/images/Emoji_1.png`}
+                src={`http://localhost:5000/api/images/Emoji_1.png`}
                 className={StyleContent.emoji_style}
               />
             </div>
@@ -33,7 +33,7 @@ const LastSection = () => {
             </p>
             <div className={StyleContent.author}>
               <img
-                src="https://movieland-backend.up.railway.app/api/images/Michael_Jackson.jpg"
+                src="http://localhost:5000/api/images/Michael_Jackson.jpg"
                 className={StyleContent.avatar}
               />
               <div>

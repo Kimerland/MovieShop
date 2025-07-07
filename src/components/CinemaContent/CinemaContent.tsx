@@ -34,7 +34,7 @@ const CinemaContent = () => {
   const handleRandom = async () => {
     try {
       setLoading(true);
-      const response = await fetch("https://movieland-backend.up.railway.app/api/movies/random");
+      const response = await fetch("http://localhost:5000/api/movies/random");
       const newMovies = await response.json();
 
       setRandomMovies((prevMovies) => [...prevMovies, ...newMovies]);

@@ -34,7 +34,7 @@ const MessagesContent: FC = () => {
     const lastMessage = history[history.length - 2];
 
     try {
-      const response = await fetch("https://movieland-backend.up.railway.app/api/chat", {
+      const response = await fetch("http://localhost:5000/api/chat", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

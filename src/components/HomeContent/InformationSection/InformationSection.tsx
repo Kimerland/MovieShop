@@ -6,14 +6,14 @@ const InformationSection = () => {
     <div className={StyleContent.information_block}>
       <div className={StyleContent.top_block}>
         <img
-          src={`https://movieland-backend.up.railway.app/api/images/watching.png`}
+          src={`http://localhost:5000/api/images/watching.png`}
           className={StyleContent.background_image}
         />
       </div>
 
       <div className={StyleContent.bottom_block}>
         <img
-          src={`https://movieland-backend.up.railway.app/api/images/1984-Movies.jpg`}
+          src={`http://localhost:5000/api/images/1984-Movies.jpg`}
           className={StyleContent.background_image}
         />
       </div>
